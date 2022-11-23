@@ -1,0 +1,50 @@
+schema {
+    query: QueryRoot
+}
+
+type QueryRoot {
+    collection: Collection
+    token: NFTToken
+    account: Account
+    mint: Mint
+    transfer: Transfer
+    block: Block
+}
+
+type Block {
+    id: Bytes32! @unique
+    height: UInt8!
+    timestamp: Int8!
+}
+type Account {
+    id: ID!
+    address: Address!
+}
+
+type Collection {
+    id: ID!
+    contract: ContractId!
+    admin: Account!
+    total_supply: Int8!
+    total_minted: Int8!
+}
+
+type NFTToken {
+    id: ID!
+    token_id: Int8!
+    previous_owner: Address!
+    current_owner: Address!
+}
+
+type Mint {
+    id: ID!
+    owner: Account!
+    token: NFTToken!
+}
+
+type Transfer {
+    id: ID!
+    token: NFTToken!
+    from_user: Address!
+    to_user: Address!
+}
