@@ -1,7 +1,7 @@
 namespace: launchventures
 identifier: nft-indexer
 abi: /Users/tusharverma/Code/fuel-indexers/fuel-nft-block-indexer/abi/nft-abi.json
-start_block: 215117
+start_block: 211850
 # your smart contract ID
 contract: 0x39150017c9e38e5e280432d546fae345d6ce6d8fe4710162c2e3a95a6faff051
 graphql_schema: /Users/tusharverma/Code/fuel-indexers/fuel-nft-block-indexer/schema/schema.graphql
